@@ -1,16 +1,20 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "declaration": true,
-    "noImplicitAny": false,
-    "suppressImplicitAnyIndexErrors": true,
+    "target": "es5",
     "module": "commonjs",
-    "noEmitHelpers": false,
-    "target": "ES5",
-    "outDir": "./dist",
-    "jsx": "react"
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "outDir": "./dist"
   },
   "formatCodeOptions": {
     "indentSize": 2,

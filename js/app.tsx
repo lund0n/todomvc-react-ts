@@ -1,11 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+// import * as Router from 'director';
 import {ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS, ENTER_KEY} from './constants';
 import {TodoItem} from './todoItem';
 import {TodoFooter} from './footer';
+import {TodoModel} from './todoModel';
 
 // No TypeScript file for Router.
-declare var Router: any;
+// declare var Router: any;
 
 export class TodoApp extends React.Component<IAppProps, IAppState> {
 
@@ -20,12 +22,12 @@ export class TodoApp extends React.Component<IAppProps, IAppState> {
   public componentDidMount() {
     var setState = this.setState;
 
-    var router = Router({
-      '/': setState.bind(this, { nowShowing: ALL_TODOS }),
-      '/active': setState.bind(this, { nowShowing: ACTIVE_TODOS }),
-      '/completed': setState.bind(this, { nowShowing: COMPLETED_TODOS })
-    });
-    router.init('/');
+    // var router = Router({
+    //   '/': setState.bind(this, { nowShowing: ALL_TODOS }),
+    //   '/active': setState.bind(this, { nowShowing: ACTIVE_TODOS }),
+    //   '/completed': setState.bind(this, { nowShowing: COMPLETED_TODOS })
+    // });
+    // router.init('/');
   }
 
   public handleNewTodoKeyDown(event) {
@@ -149,3 +151,15 @@ export class TodoApp extends React.Component<IAppProps, IAppState> {
     );
   }
 }
+
+var model = new TodoModel('react-todos');
+
+function render() {
+  ReactDOM.render(
+    <TodoApp model={model}/>,
+    document.querySelector('.todoapp')
+  )
+}
+
+model.subscribe(render);
+render();

@@ -10,12 +10,16 @@
   },
   "devDependencies": {
     "http-server": "0.9.0",
+    "ts-loader": "0.8.2",
     "typescript": "1.8.10",
-    "typings": "1.0.4"
+    "typings": "1.0.4",
+    "webpack": "1.13.1",
+    "webpack-dev-server": "1.14.1"
   },
   "scripts": {
     "typings": "typings",
     "build": "tsc",
-    "start": "http-server -p 3000 ."
+    "wp-build": "webpack",
+    "start": "webpack-dev-server --port 3000 --hot --inline"
   }
 }
