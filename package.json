@@ -9,10 +9,13 @@
     "todomvc-common": "1.0.2"
   },
   "devDependencies": {
+    "http-server": "0.9.0",
     "typescript": "1.8.10",
     "typings": "1.0.4"
   },
   "scripts": {
-    "typings": "typings"
+    "typings": "typings",
+    "build": "tsc",
+    "start": "http-server -p 3000 ."
   }
 }

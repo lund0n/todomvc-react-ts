@@ -9,7 +9,8 @@
     "module": "commonjs",
     "noEmitHelpers": false,
     "target": "ES5",
-    "outDir": "./"
+    "outDir": "./dist",
+    "jsx": "react"
   },
   "formatCodeOptions": {
     "indentSize": 2,
