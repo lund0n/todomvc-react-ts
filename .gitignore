@@ -4,21 +4,4 @@ npm-debug.log*
 typings/
 
 # Generated Code
-app.d.ts
-app.js
-app.js.map
-constants.d.ts
-constants.js
-constants.js.map
-footer.d.ts
-footer.js
-footer.js.map
-todoItem.d.ts
-todoItem.js
-todoItem.js.map
-todoModel.d.ts
-todoModel.js
-todoModel.js.map
-utils.d.ts
-utils.js
-utils.js.map
+dist/
