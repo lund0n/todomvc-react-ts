@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "declaration": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "module": "commonjs",
+    "noEmitHelpers": false,
+    "target": "ES5",
+    "outDir": "./"
+  },
+  "formatCodeOptions": {
+    "indentSize": 2,
+    "tabSize": 2
+  },
+  "filesGlob": [
+    "typings/index.d.ts",
+    "js/**/*.ts",
+    "js/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "tests"
+  ],
+  "atom": {
+    "rewriteTsconfig": true,
+    "formatOnSave": true
+  },
+  "files": [
+    "typings/index.d.ts",
+    "js/constants.ts",
+    "js/interfaces.d.ts",
+    "js/todoModel.ts",
+    "js/utils.ts",
+    "js/app.tsx",
+    "js/footer.tsx",
+    "js/todoItem.tsx"
+  ]
+}
