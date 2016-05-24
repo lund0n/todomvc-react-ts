@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import * as director from 'director';
+import * as Router from 'director';
 import {ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS, ENTER_KEY} from './constants';
 import {TodoItem} from './todoItem';
 import {TodoFooter} from './footer';
@@ -18,7 +18,7 @@ export class TodoApp extends React.Component<IAppProps, IAppState> {
 
   public componentDidMount() {
     var setState = this.setState;
-    var router = director.Router({
+    var router = Router({
       '/': setState.bind(this, { nowShowing: ALL_TODOS }),
       '/active': setState.bind(this, { nowShowing: ACTIVE_TODOS }),
       '/completed': setState.bind(this, { nowShowing: COMPLETED_TODOS })

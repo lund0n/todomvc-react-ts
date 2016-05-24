@@ -18,6 +18,9 @@ module.exports = {
     ]
   },
   externals: {
-
+    'classnames': 'classNames',
+    'director': 'Router',
+    'react': 'React',
+    'react-dom': 'ReactDOM'
   }
 };
