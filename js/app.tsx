@@ -5,6 +5,8 @@ import {ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS, ENTER_KEY} from './constants';
 import {TodoItem} from './todoItem';
 import {TodoFooter} from './footer';
 import {TodoModel} from './todoModel';
+import 'todomvc-common/base.css';
+import 'todomvc-app-css/index.css';
 
 export class TodoApp extends React.Component<IAppProps, IAppState> {
 

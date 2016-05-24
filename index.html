@@ -4,8 +4,14 @@
 <head>
     <meta charset="utf-8">
     <title>React • TodoMVC</title>
-    <link rel="stylesheet" href="node_modules/todomvc-common/base.css">
-    <link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+    <!-- <link rel="stylesheet" href="node_modules/todomvc-common/base.css"> -->
+    <!-- <link rel="stylesheet" href="node_modules/todomvc-app-css/index.css"> -->
+    <!-- CDN deps -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.28/system.js"></script> -->
+    <!-- <script src="systemjs.config.cdn.js"></script> -->
+    <!-- Local deps -->
+    <script src="./node_modules/systemjs/dist/system.js"></script>
+    <script src="systemjs.config.local.js"></script>
 </head>
 
 <body>
@@ -18,11 +24,16 @@
         </p>
         <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
     </footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/classnames/2.2.5/index.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/Director/1.2.8/director.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
-    <script type="text/javascript" src="dist/app.js"></script>
+    <script>
+        System.import('dist/app.js').then(
+            function() {
+                console.log('Loaded!');
+            },
+            function(err) {
+                console.error('Error!', err);
+            }
+        );
+    </script>
 </body>
 
 </html>

@@ -9,7 +9,10 @@
     "todomvc-common": "1.0.2"
   },
   "devDependencies": {
+    "css-loader": "0.23.1",
     "http-server": "0.9.0",
+    "style-loader": "0.13.1",
+    "systemjs": "0.19.28",
     "ts-loader": "0.8.2",
     "typescript": "1.8.10",
     "typings": "1.0.4",
@@ -20,6 +23,6 @@
     "typings": "typings",
     "build": "tsc",
     "wp-build": "webpack",
-    "start": "webpack-dev-server --port 3000 --hot --inline"
+    "start": "webpack-dev-server --port 3000"
   }
 }

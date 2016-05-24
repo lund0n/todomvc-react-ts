@@ -6,7 +6,8 @@ module.exports = {
   output: {
     path: path.resolve('dist'),
     publicPath: '/dist/',
-    filename: 'app.js'
+    filename: 'app.js',
+    libraryTarget: 'umd'
   },
   devtool: '#source-map',
   resolve: {
@@ -14,13 +15,14 @@ module.exports = {
   },
   module: {
     loaders: [
+      {test: /\.css$/, excludes: /node_modules/, loaders: ['style', 'css']},
       {test: /\.tsx?$/, excludes: /node_modules/, loader: 'ts-loader'}
     ]
   },
-  externals: {
-    'classnames': 'classNames',
-    'director': 'Router',
-    'react': 'React',
-    'react-dom': 'ReactDOM'
-  }
+  externals: [
+    'classnames',
+    'director',
+    'react',
+    'react-dom'
+  ]
 };
