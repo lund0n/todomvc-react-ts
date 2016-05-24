@@ -36,6 +36,7 @@
   "files": [
     "typings/index.d.ts",
     "js/constants.ts",
+    "js/externals.d.ts",
     "js/interfaces.d.ts",
     "js/todoModel.ts",
     "js/utils.ts",
