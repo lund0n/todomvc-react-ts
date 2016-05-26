@@ -17,12 +17,12 @@
     "typescript": "1.8.10",
     "typings": "1.0.4",
     "webpack": "1.13.1",
-    "webpack-dev-server": "1.14.1"
+    "webpack-dev-server": "1.14.0"
   },
   "scripts": {
     "typings": "typings",
     "build": "tsc",
     "wp-build": "webpack",
-    "start": "webpack-dev-server --port 3000"
+    "start": "webpack-dev-server --port 3000 --inline"
   }
 }
