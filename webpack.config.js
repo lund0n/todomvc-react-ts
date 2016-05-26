@@ -1,5 +1,6 @@
 'use strict';
 const path = require('path');
+const WebpackLivereloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   entry: './js/app.tsx',
@@ -24,5 +25,8 @@ module.exports = {
     'director',
     'react',
     'react-dom'
+  ],
+  plugins: [
+    new WebpackLivereloadPlugin()
   ]
 };
