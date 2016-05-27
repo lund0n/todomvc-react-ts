@@ -7,8 +7,8 @@ import * as classNames from 'classnames';
 export class TodoFooter extends React.Component<ITodoFooterProps, {}> {
 
   public render() {
-    var activeTodoWord = Utils.pluralize(this.props.count, 'item');
-    var clearButton: any = null;
+    const activeTodoWord = Utils.pluralize(this.props.count, 'item');
+    let clearButton: any = null;
 
     if (this.props.completedCount > 0) {
       clearButton = (
@@ -20,7 +20,7 @@ export class TodoFooter extends React.Component<ITodoFooterProps, {}> {
       );
     }
 
-    var nowShowing = this.props.nowShowing;
+    const nowShowing = this.props.nowShowing;
     return (
       <footer className="footer">
         <span className="todo-count">

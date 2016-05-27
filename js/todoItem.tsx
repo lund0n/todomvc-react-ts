@@ -11,7 +11,7 @@ export class TodoItem extends React.Component<ITodoItemProps, ITodoItemState> {
   }
 
   public handleSubmit(event: any) {
-    var val = this.state.editText.trim();
+    const val = this.state.editText.trim();
     if (val) {
       this.props.onSave(val);
       this.setState({ editText: val });
@@ -50,7 +50,7 @@ export class TodoItem extends React.Component<ITodoItemProps, ITodoItemState> {
   public componentDidUpdate(prevProps: ITodoItemProps) {
     if (!prevProps.editing && this.props.editing) {
       // TODO import react-dom
-      var node = ReactDOM.findDOMNode<HTMLInputElement>(this.refs['editField']);
+      const node = ReactDOM.findDOMNode<HTMLInputElement>(this.refs['editField']);
       node.focus();
       node.setSelectionRange(node.value.length, node.value.length);
     }
@@ -69,7 +69,14 @@ export class TodoItem extends React.Component<ITodoItemProps, ITodoItemState> {
           </label>
           <button className="destroy" onClick={this.props.onDestroy} />
         </div>
-        <input ref="editField" className="edit" value={this.state.editText} onBlur={e => this.handleSubmit(e) } onChange={e => this.handleChange(e) } onKeyDown={e => this.handleKeyDown(e) }/>
+        <input
+          ref="editField"
+          className="edit"
+          value={this.state.editText}
+          onBlur={e => this.handleSubmit(e) }
+          onChange={e => this.handleChange(e) }
+          onKeyDown={e => this.handleKeyDown(e) }
+          />
       </li>
     );
   }

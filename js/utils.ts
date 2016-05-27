@@ -1,7 +1,8 @@
 export class Utils {
   public static uuid(): string {
-    var i: number, random: number;
-    var uuid = '';
+    let i: number;
+    let random: number;
+    let uuid = '';
 
     for (i = 0; i < 32; i++) {
       random = Math.random() * 16 | 0;
@@ -23,15 +24,15 @@ export class Utils {
     if (data) {
       return localStorage.setItem(namespace, JSON.stringify(data));
     }
-    var store = localStorage.getItem(namespace);
+    const store = localStorage.getItem(namespace);
     return (store && JSON.parse(store)) || [];
   }
 
   public static extend(...objs: any[]): any {
-    var newObj = {};
-    for (var i = 0; i < objs.length; i++) {
-      var obj = objs[i];
-      for (var key in obj) {
+    const newObj = {};
+    for (let i = 0; i < objs.length; i++) {
+      const obj = objs[i];
+      for (let key in obj) {
         if (obj.hasOwnProperty(key)) {
           newObj[key] = obj[key];
         }

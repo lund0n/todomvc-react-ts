@@ -16,10 +16,17 @@ module.exports = {
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
   },
   module: {
+    preLoaders: [
+      {test: /\.tsx?$/, excludes: /node_modules/, loader: 'tslint'}
+    ],
     loaders: [
       {test: /\.css$/, excludes: /node_modules/, loaders: ['style', 'css']},
       {test: /\.tsx?$/, excludes: /node_modules/, loader: 'ts-loader'}
     ]
+  },
+  tslint: {
+    emitErrors: true,
+    failOnHint: true,
   },
   externals: [
     'classnames',
