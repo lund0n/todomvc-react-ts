@@ -1,6 +1,7 @@
 'use strict';
 const path = require('path');
 const WebpackLivereloadPlugin = require('webpack-livereload-plugin');
+const WebpackNotifierPlugin = require('webpack-notifier');
 
 module.exports = {
   entry: './js/app.tsx',
@@ -27,6 +28,7 @@ module.exports = {
     'react-dom'
   ],
   plugins: [
-    new WebpackLivereloadPlugin()
+    new WebpackLivereloadPlugin(),
+    new WebpackNotifierPlugin({title: 'Webpack'})
   ]
 };
