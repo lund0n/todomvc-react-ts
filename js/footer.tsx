@@ -4,6 +4,13 @@ import {ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS} from './constants';
 import {Utils} from './utils';
 import * as classNames from 'classnames';
 
+interface ITodoFooterProps {
+  completedCount: number;
+  onClearCompleted: any;
+  nowShowing: string;
+  count: number;
+}
+
 export class TodoFooter extends React.Component<ITodoFooterProps, {}> {
 
   public render() {

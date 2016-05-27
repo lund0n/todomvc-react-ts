@@ -1,5 +1,25 @@
 import {Utils} from './utils';
 
+export interface ITodo {
+  id: string;
+  title: string;
+  completed: boolean;
+}
+
+export interface ITodoModel {
+  key: any;
+  todos: Array<ITodo>;
+  onChanges: Array<any>;
+  subscribe(onChange: Function): void;
+  inform(): void;
+  addTodo(title: string): void;
+  toggleAll(checked: boolean): void;
+  toggle(todoToToggle: ITodo): void;
+  destroy(todo: ITodo): void;
+  save(todoToSave: ITodo, text: string): void;
+  clearCompleted(): void;
+}
+
 export class TodoModel implements ITodoModel {
 
   public key: string;

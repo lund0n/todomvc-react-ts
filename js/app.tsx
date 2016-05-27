@@ -4,9 +4,18 @@ import * as Router from 'director';
 import {ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS, ENTER_KEY} from './constants';
 import {TodoItem} from './todoItem';
 import {TodoFooter} from './footer';
-import {TodoModel} from './todoModel';
+import {ITodo, ITodoModel, TodoModel} from './todoModel';
 import 'todomvc-common/base.css';
 import 'todomvc-app-css/index.css';
+
+interface IAppProps {
+  model: ITodoModel;
+}
+
+interface IAppState {
+  editing?: string;
+  nowShowing?: string;
+}
 
 export class TodoApp extends React.Component<IAppProps, IAppState> {
 

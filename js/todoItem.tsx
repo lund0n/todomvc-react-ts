@@ -2,6 +2,22 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {ENTER_KEY, ESCAPE_KEY} from './constants';
 import * as classNames from 'classnames';
+import {ITodo} from './todoModel';
+
+interface ITodoItemProps {
+  key: string;
+  todo: ITodo;
+  editing?: boolean;
+  onSave: (val: any) => void;
+  onDestroy: () => void;
+  onEdit: () => void;
+  onCancel: (event: any) => void;
+  onToggle: () => void;
+}
+
+interface ITodoItemState {
+  editText: string;
+}
 
 export class TodoItem extends React.Component<ITodoItemProps, ITodoItemState> {
 
