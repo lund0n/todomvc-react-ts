@@ -40,6 +40,7 @@
     "js/todoModel.ts",
     "js/utils.ts",
     "js/app.tsx",
+    "js/footer.test.tsx",
     "js/footer.tsx",
     "js/todoItem.tsx"
   ]

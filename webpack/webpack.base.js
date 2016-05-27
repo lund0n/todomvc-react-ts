@@ -34,9 +34,5 @@ module.exports = {
     'moment',
     'react',
     'react-dom'
-  ],
-  plugins: [
-    new WebpackLivereloadPlugin(),
-    new WebpackNotifierPlugin({title: 'Webpack'})
   ]
 };
