@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 import {ENTER_KEY, ESCAPE_KEY} from './constants';
 import * as classNames from 'classnames';
 import {ITodo} from './todoModel';
+import * as moment from 'moment';
 
 interface ITodoItemProps {
   key: string;
@@ -81,7 +82,7 @@ export class TodoItem extends React.Component<ITodoItemProps, ITodoItemState> {
         <div className="view">
           <input className="toggle" type="checkbox" checked={this.props.todo.completed} onChange={this.props.onToggle}/>
           <label onDoubleClick={e => this.handleEdit() }>
-            {this.props.todo.title}
+            {this.props.todo.title} {moment(this.props.todo.created).format('ddd, hh:mm:ssA') }
           </label>
           <button className="destroy" onClick={this.props.onDestroy} />
         </div>

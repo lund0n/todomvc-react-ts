@@ -31,6 +31,7 @@ module.exports = {
   externals: [
     'classnames',
     'director',
+    'moment',
     'react',
     'react-dom'
   ],

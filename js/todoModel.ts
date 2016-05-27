@@ -1,9 +1,11 @@
+import * as moment from 'moment';
 import {Utils} from './utils';
 
 export interface ITodo {
   id: string;
   title: string;
   completed: boolean;
+  created: string;
 }
 
 export interface ITodoModel {
@@ -45,7 +47,8 @@ export class TodoModel implements ITodoModel {
     this.todos = this.todos.concat({
       id: Utils.uuid(),
       title: title,
-      completed: false
+      completed: false,
+      created: moment().format()
     });
 
     this.inform();
