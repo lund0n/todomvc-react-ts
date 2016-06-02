@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
     "isolatedModules": false,
@@ -14,7 +14,8 @@
     "noLib": false,
     "preserveConstEnums": true,
     "suppressImplicitAnyIndexErrors": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "sourceMap": true
   },
   "formatCodeOptions": {
     "indentSize": 2,
@@ -42,6 +43,7 @@
     "js/app.tsx",
     "js/footer.test.tsx",
     "js/footer.tsx",
+    "js/todoItem.test.tsx",
     "js/todoItem.tsx"
   ]
 }

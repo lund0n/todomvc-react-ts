@@ -21,18 +21,18 @@ module.exports = {
     ],
     loaders: [
       {test: /\.css$/, excludes: /node_modules/, loaders: ['style', 'css']},
-      {test: /\.tsx?$/, excludes: /node_modules/, loader: 'ts-loader'}
+      {
+        test: /\.tsx?$/,
+        excludes: /node_modules/,
+        loaders: [
+          'babel',
+          'ts-loader'
+        ]
+      },
     ]
   },
   tslint: {
     emitErrors: true,
     failOnHint: true,
-  },
-  externals: [
-    'classnames',
-    'director',
-    'moment',
-    'react',
-    'react-dom'
-  ]
+  }
 };
